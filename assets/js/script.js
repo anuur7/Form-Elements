@@ -4,6 +4,8 @@ const shoppingInputElement = $('#shopping-input');
 
 function formSubmitHandler(event) {
     event.preventDefault();
+    console.log("Form submitted")
+
     const newItem = shoppingInputElement.val();
     addNewShoppingListElement(newItem);
 }
@@ -14,8 +16,10 @@ function addNewShoppingListElement(item) {
     shoppingListElement.append(newLineItem);
 }
 
+// shoppingFormElement.on('submit', formSubmitHandler)
 $('#submit-button').click(formSubmitHandler)
 
+console.log("hello")
 /*
 * Wire up a function to the button
 * Pick out the input value on the form
